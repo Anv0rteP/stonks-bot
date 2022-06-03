@@ -1,0 +1,508 @@
+
+  
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+      <title>Code Package | ZXC StonksBot 1.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" />
+      <link rel="stylesheet" href="../_static/theme.33684ae9923d01874503.css" />
+        <link rel="search" title="Search" href="../search.html" />
+        <link rel="index" title="Index" href="../genindex.html" />
+        <link rel="prev" title="Main Page" href="../index.html" />
+  </head>
+
+  <body class="antialiased text-gray scroll-smooth">
+    <div
+      id="page"
+      data-controller="sidebar search"
+      data-action="keydown@window->search#focus"
+      class="h-screen xl:grid xl:grid-layout"
+    >
+      <a class="block text-xl bg-white py-4 z-20 absolute top-0 h-14 inset-x-0 text-center transform -translate-y-full focus:translate-y-0 focus:outline-none transition-transform duration-75" href="#code-package" title="Skip navigation links">Skip to content</a>
+
+      <header class="grid-area-header z-10 h-14">
+        <div class="bg-gray-dark shadow-md flex items-center h-full xl:px-2 relative"><div class="flex items-center">
+      <button
+    data-action="sidebar#open"
+    data-sidebar-target="hamburger"
+    class="xl:hidden h-14 w-14 leading-14 text-gray-100 hover:bg-gray-700 hover:text-brand focus:outline-none focus:bg-gray-700 focus:text-brand">
+  <span class="sr-only">Open navigation menu</span>
+  <svg aria-hidden="true" class="fill-current h-8 w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+</button><a class="hover:bg-gray-700 focus:bg-gray-700 focus:outline-none tooltipped tooltipped-sw"
+   href="../index.html"
+   aria-label="Back to homepage"><span class="hidden lg:inline-block shrink-0 font-medium text-gray-100 mx-5 leading-14 tracking-wider">ZXC StonksBot 1.0.0 documentation</span>
+</a></div><div class="flex justify-end items-center flex-1"><form
+  id="searchbox"
+  action="../search.html"
+  data-action="click->search#focusSearchInput"
+  method="get"
+  class="flex print:hidden justify-between items-center leading-14 md:ml-4 bg-gray-dark text-gray-300 focus-within:bg-gray-50 focus-within:text-gray-800 focus-within:absolute focus-within:inset-x-0 focus-within:top-0 md:focus-within:w-full md:focus-within:static">
+
+  <button
+    class="text-inherit h-14 w-14"
+    aria-label="Get search results"
+    tabindex="-1"
+  >
+    <svg aria-hidden="true" class="fill-current stroke-current h-8 w-8" stroke-width="0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+  </button>
+
+  <input
+    name="q"
+    id="search-input"
+    data-search-target="searchInput"
+    type="search"
+    aria-label="Search the docs"
+    placeholder="Search the docs"
+    class="pr-2 bg-transparent text-inherit focus:outline-none w-0 md:w-auto focus:w-full transition-all duration-100"
+  />
+</form></div>
+</div>
+      </header>
+
+      
+  <aside data-sidebar-target="sidebar" class="grid-area-sidebar h-full fixed xl:relative inset-y-0 left-0 z-20 xl:z-0 print:hidden overflow-y-auto transition-all transform transform-gpu -translate-x-full opacity-0 duration-300 xl:translate-x-0 xl:opacity-100">
+    <nav
+  role="navigation"
+  class="h-full overflow-y-auto bg-white text-gray-600 pt-8 flex flex-col"
+>
+  <div class="nav-toc flex-1 pl-6"><p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Code Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-bot_code.api_work">Api Work Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bot_code.carcass">Carcass Moudle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bot_code.charts">Charts Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bot_code.stock_class">Stock Class Module</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+  <button
+      data-action=""
+      title="Close navigation menu"
+      class="text-4xl text-gray-800 p-4 bottom-0 hover:text-brand xl:hidden focus:text-brand self-center">
+    <span class="sr-only">Close navigation menu</span>
+    <svg aria-hidden="true" class="fill-current stroke-current h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+  </button>
+</nav>
+  </aside>
+
+  <main
+    data-controller="scroll"
+    data-action="scroll->scroll#showButton"
+    class="px-4 xl:ml-fluid grid-area-main overflow-y-auto flex flex-col h-full mx-0 md:mx-auto xl:mr-0"
+  ><nav role="navigation"
+     aria-label="breadcrumbs"
+     class="print:hidden mt-12 text-sm text-gray-light">
+  <a class="text-gray-light text-sm hover:text-gray-dark font-medium focus:text-gray-dark" href="../index.html">ZXC StonksBot 1.0.0 documentation</a>
+  <span class="mr-1">/</span><span aria-current="page">Code Package</span>
+</nav>
+    <article role="main" class="flex-1">
+      
+  <section id="code-package">
+<h1>Code Package<a class="headerlink" href="#code-package" title="Permalink to this headline"><span>#</span></a></h1>
+<section id="module-bot_code.api_work">
+<span id="api-work-module"></span><h2>Api Work Module<a class="headerlink" href="#module-bot_code.api_work" title="Permalink to this headline"><span>#</span></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="bot_code.api_work.search">
+<span class="sig-prename descclassname"><span class="pre">bot_code.api_work.</span></span><span class="sig-name descname"><span class="pre">search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticker</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bot_code/api_work.html#search"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bot_code.api_work.search" title="Permalink to this definition"><span>#</span></a></dt>
+<dd><p>Обработка api-запроса для получения таблицы биржевых инструментов</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ticker</strong> (<em>String</em>) – Тикер биржевого инструмента</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Датафрейм с основными данными по тикеру</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bot_code.api_work.quote_endpoint">
+<span class="sig-prename descclassname"><span class="pre">bot_code.api_work.</span></span><span class="sig-name descname"><span class="pre">quote_endpoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticker</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bot_code/api_work.html#quote_endpoint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bot_code.api_work.quote_endpoint" title="Permalink to this definition"><span>#</span></a></dt>
+<dd><p>Обработка api-запроса для получения дополнительных значений акции, необходимых для построения графиков</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ticker</strong> (<em>String</em>) – Тикер биржевого инструмента</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Датафрейм с нужными для построения графиков данными</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bot_code.api_work.cur_exchange_rate">
+<span class="sig-prename descclassname"><span class="pre">bot_code.api_work.</span></span><span class="sig-name descname"><span class="pre">cur_exchange_rate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">from_cur</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_cur</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bot_code/api_work.html#cur_exchange_rate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bot_code.api_work.cur_exchange_rate" title="Permalink to this definition"><span>#</span></a></dt>
+<dd><p>Обработка api-запроса для получения курсов обмена</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>from_cur</strong> (<em>String</em>) – Конвертируемая валюта</p></li>
+<li><p><strong>to_cur</strong> (<em>String</em>) – Итоговая валюта</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Цена итоговой валюты</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-bot_code.carcass">
+<span id="carcass-moudle"></span><h2>Carcass Moudle<a class="headerlink" href="#module-bot_code.carcass" title="Permalink to this headline"><span>#</span></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="bot_code.carcass.show_cur_exchange_rate">
+<span class="sig-prename descclassname"><span class="pre">bot_code.carcass.</span></span><span class="sig-name descname"><span class="pre">show_cur_exchange_rate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bot_code/carcass.html#show_cur_exchange_rate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bot_code.carcass.show_cur_exchange_rate" title="Permalink to this definition"><span>#</span></a></dt>
+<dd><p>Вывод сообщения с требуемым форматом ввода для exchange</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> (<em>telebot.types.Message</em>) – Содержит пользовательский ввод</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bot_code.carcass.exchange_calculator">
+<span class="sig-prename descclassname"><span class="pre">bot_code.carcass.</span></span><span class="sig-name descname"><span class="pre">exchange_calculator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bot_code/carcass.html#exchange_calculator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bot_code.carcass.exchange_calculator" title="Permalink to this definition"><span>#</span></a></dt>
+<dd><p>Обрабатывает пользовательский ввод для exchange</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> (<em>telebot.types.Message</em>) – Содержит пользовательский ввод</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bot_code.carcass.cripto_exchange_rate_handler">
+<span class="sig-prename descclassname"><span class="pre">bot_code.carcass.</span></span><span class="sig-name descname"><span class="pre">cripto_exchange_rate_handler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bot_code/carcass.html#cripto_exchange_rate_handler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bot_code.carcass.cripto_exchange_rate_handler" title="Permalink to this definition"><span>#</span></a></dt>
+<dd><p>Вывод inline-клавиатуры для популярных криптовалют</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> (<em>telebot.types.Message</em>) – Содержит пользовательский ввод</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bot_code.carcass.exchange_rate_handler">
+<span class="sig-prename descclassname"><span class="pre">bot_code.carcass.</span></span><span class="sig-name descname"><span class="pre">exchange_rate_handler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bot_code/carcass.html#exchange_rate_handler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bot_code.carcass.exchange_rate_handler" title="Permalink to this definition"><span>#</span></a></dt>
+<dd><p>Вывод inline-клавиатуры для курса обмена популярных валют</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> (<em>telebot.types.Message</em>) – Содержит пользовательский ввод</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bot_code.carcass.exchange_rate_sender">
+<span class="sig-prename descclassname"><span class="pre">bot_code.carcass.</span></span><span class="sig-name descname"><span class="pre">exchange_rate_sender</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bot_code/carcass.html#exchange_rate_sender"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bot_code.carcass.exchange_rate_sender" title="Permalink to this definition"><span>#</span></a></dt>
+<dd><p>Обрабатывает нажатие кнопок в обменных функциях</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>callback</strong> (<em>telebot.types.CallbackQuery</em>) – Содержит пользовательский выбор c inline-клавиатуре</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bot_code.carcass.text_handler">
+<span class="sig-prename descclassname"><span class="pre">bot_code.carcass.</span></span><span class="sig-name descname"><span class="pre">text_handler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bot_code/carcass.html#text_handler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bot_code.carcass.text_handler" title="Permalink to this definition"><span>#</span></a></dt>
+<dd><p>Обрабатывает любой введенный текст на проверку существующий команды</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> (<em>telebot.types.Message</em>) – Содержит пользовательский ввод</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bot_code.carcass.ticker_input">
+<span class="sig-prename descclassname"><span class="pre">bot_code.carcass.</span></span><span class="sig-name descname"><span class="pre">ticker_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bot_code/carcass.html#ticker_input"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bot_code.carcass.ticker_input" title="Permalink to this definition"><span>#</span></a></dt>
+<dd><p>Ввод тикера</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bot_code.carcass.ticker_input_handler">
+<span class="sig-prename descclassname"><span class="pre">bot_code.carcass.</span></span><span class="sig-name descname"><span class="pre">ticker_input_handler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bot_code/carcass.html#ticker_input_handler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bot_code.carcass.ticker_input_handler" title="Permalink to this definition"><span>#</span></a></dt>
+<dd><p>Обработка введенного тикера, вывод кнопок для дальнейших операций с тикером</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> (<em>telebot.types.Message</em>) – Содержит пользовательский ввод</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bot_code.carcass.candle_handler">
+<span class="sig-prename descclassname"><span class="pre">bot_code.carcass.</span></span><span class="sig-name descname"><span class="pre">candle_handler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bot_code/carcass.html#candle_handler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bot_code.carcass.candle_handler" title="Permalink to this definition"><span>#</span></a></dt>
+<dd><p>Обрабатывает пользовательский ввод для определения периода графика свеч</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> (<em>telebot.types.Message</em>) – Содержит пользовательский ввод</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bot_code.carcass.compartment_chart">
+<span class="sig-prename descclassname"><span class="pre">bot_code.carcass.</span></span><span class="sig-name descname"><span class="pre">compartment_chart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bot_code/carcass.html#compartment_chart"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bot_code.carcass.compartment_chart" title="Permalink to this definition"><span>#</span></a></dt>
+<dd><p>Обрабатывает пользвотельский ввод второго значения тикера для построения графика сравнения, также спрашивает
+период графика</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> (<em>telebot.types.Message</em>) – Содержит пользовательский ввод</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bot_code.carcass.adjusted_num_handler">
+<span class="sig-prename descclassname"><span class="pre">bot_code.carcass.</span></span><span class="sig-name descname"><span class="pre">adjusted_num_handler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bot_code/carcass.html#adjusted_num_handler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bot_code.carcass.adjusted_num_handler" title="Permalink to this definition"><span>#</span></a></dt>
+<dd><p>Обработка нажатие кнопки при выборе периодов вывода графика</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>callback</strong> (<em>telebot.types.CallbackQuery</em>) – Содержит пользовательский выбор c inline-клавиатуре</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bot_code.carcass.overview_result">
+<span class="sig-prename descclassname"><span class="pre">bot_code.carcass.</span></span><span class="sig-name descname"><span class="pre">overview_result</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bot_code/carcass.html#overview_result"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bot_code.carcass.overview_result" title="Permalink to this definition"><span>#</span></a></dt>
+<dd><p>Вывод оверьвю полученного тикера в .png формате</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> (<em>telebot.types.Message</em>) – Содержит пользовательский ввод</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bot_code.carcass.data_processing_variant_handler">
+<span class="sig-prename descclassname"><span class="pre">bot_code.carcass.</span></span><span class="sig-name descname"><span class="pre">data_processing_variant_handler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bot_code/carcass.html#data_processing_variant_handler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bot_code.carcass.data_processing_variant_handler" title="Permalink to this definition"><span>#</span></a></dt>
+<dd><p>Обработка нажатия кнопки в /overview</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>callback</strong> (<em>telebot.types.CallbackQuery</em>) – Содержит пользовательский выбор c inline-клавиатуре</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bot_code.carcass.user_index_input">
+<span class="sig-prename descclassname"><span class="pre">bot_code.carcass.</span></span><span class="sig-name descname"><span class="pre">user_index_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bot_code/carcass.html#user_index_input"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bot_code.carcass.user_index_input" title="Permalink to this definition"><span>#</span></a></dt>
+<dd><p>Обработка ввода id тикера из .png таблицы</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> (<em>telebot.types.Message</em>) – Содержит пользовательский ввод</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bot_code.carcass.help_command_handler">
+<span class="sig-prename descclassname"><span class="pre">bot_code.carcass.</span></span><span class="sig-name descname"><span class="pre">help_command_handler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bot_code/carcass.html#help_command_handler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bot_code.carcass.help_command_handler" title="Permalink to this definition"><span>#</span></a></dt>
+<dd><p>Вывод сообщения команды /help</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> (<em>telebot.types.Message</em>) – Содержит пользовательский ввод</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bot_code.carcass.start_handler">
+<span class="sig-prename descclassname"><span class="pre">bot_code.carcass.</span></span><span class="sig-name descname"><span class="pre">start_handler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bot_code/carcass.html#start_handler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bot_code.carcass.start_handler" title="Permalink to this definition"><span>#</span></a></dt>
+<dd><p>Вывод сообщения команды /start</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> (<em>telebot.types.Message</em>) – Содержит пользовательский ввод</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bot_code.carcass.make_markup">
+<span class="sig-prename descclassname"><span class="pre">bot_code.carcass.</span></span><span class="sig-name descname"><span class="pre">make_markup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cur_array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cur_iso_code_array</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bot_code/carcass.html#make_markup"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bot_code.carcass.make_markup" title="Permalink to this definition"><span>#</span></a></dt>
+<dd><p>Создание inline-клавиатуры для валют</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cur_array</strong> (<em>List</em>) – Массив валют</p></li>
+<li><p><strong>cur_iso_code_array</strong> (<em>List</em>) – Массив валют в iso формате</p></li>
+<li><p><strong>mode</strong> (<em>Integer</em>) – Режим работы функции</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Inline-клавиатура</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>telebot.types.InlineKeyboardMarkup</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bot_code.carcass.is_num">
+<span class="sig-prename descclassname"><span class="pre">bot_code.carcass.</span></span><span class="sig-name descname"><span class="pre">is_num</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bot_code/carcass.html#is_num"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bot_code.carcass.is_num" title="Permalink to this definition"><span>#</span></a></dt>
+<dd><p>Проверка String на возможность конвертации в число</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>number</strong> (<em>String</em>) – Строка</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-bot_code.charts">
+<span id="charts-module"></span><h2>Charts Module<a class="headerlink" href="#module-bot_code.charts" title="Permalink to this headline"><span>#</span></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="bot_code.charts.time_series_data">
+<span class="sig-prename descclassname"><span class="pre">bot_code.charts.</span></span><span class="sig-name descname"><span class="pre">time_series_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">option</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbol</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bot_code/charts.html#time_series_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bot_code.charts.time_series_data" title="Permalink to this definition"><span>#</span></a></dt>
+<dd><p>Обработка диапазона времени для создания графика</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>option</strong> (<em>String</em>) – Диапазон даты</p></li>
+<li><p><strong>symbol</strong> (<em>String</em>) – Тикер компании</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Датафрейм для постройки графика</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bot_code.charts.make_candlestick_chart">
+<span class="sig-prename descclassname"><span class="pre">bot_code.charts.</span></span><span class="sig-name descname"><span class="pre">make_candlestick_chart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbol</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bot_code/charts.html#make_candlestick_chart"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bot_code.charts.make_candlestick_chart" title="Permalink to this definition"><span>#</span></a></dt>
+<dd><p>Создание .png для графика свеч</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>option</strong> (<em>String</em>) – Диапазон даты</p></li>
+<li><p><strong>symbol</strong> (<em>String</em>) – Тикер компании</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bot_code.charts.make_chart">
+<span class="sig-prename descclassname"><span class="pre">bot_code.charts.</span></span><span class="sig-name descname"><span class="pre">make_chart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">option</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ticker1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ticker2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bot_code/charts.html#make_chart"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bot_code.charts.make_chart" title="Permalink to this definition"><span>#</span></a></dt>
+<dd><p>Создание .png для графика сравнения</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>option</strong> (<em>String</em>) – Диапазон даты</p></li>
+<li><p><strong>ticker1</strong> (<em>String</em>) – Тикер первой компании</p></li>
+<li><p><strong>ticker2</strong> (<em>String</em>) – Тикер второй компании</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-bot_code.stock_class">
+<span id="stock-class-module"></span><h2>Stock Class Module<a class="headerlink" href="#module-bot_code.stock_class" title="Permalink to this headline"><span>#</span></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="bot_code.stock_class.CurrentStock">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bot_code.stock_class.</span></span><span class="sig-name descname"><span class="pre">CurrentStock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">symbol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stock_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timezone</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">currency</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bot_code/stock_class.html#CurrentStock"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bot_code.stock_class.CurrentStock" title="Permalink to this definition"><span>#</span></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="bot_code.stock_class.CurrentStock.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">symbol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stock_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timezone</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">currency</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bot_code/stock_class.html#CurrentStock.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bot_code.stock_class.CurrentStock.__init__" title="Permalink to this definition"><span>#</span></a></dt>
+<dd><p>Хранение основной информации об обрабатываемой компании</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>symbol</strong> (<em>String</em>) – Тикер</p></li>
+<li><p><strong>name</strong> (<em>String</em>) – Название компании</p></li>
+<li><p><strong>stock_type</strong> (<em>String</em>) – Тип биржевого инструмента</p></li>
+<li><p><strong>region</strong> (<em>String</em>) – Регион биржевого инструмента</p></li>
+<li><p><strong>timezone</strong> (<em>String</em>) – Таймзона биржевого инструмента</p></li>
+<li><p><strong>timezone</strong> – Валюта торговли биржевого инструмента</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bot_code.stock_class.CurrentStock.add">
+<span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">price</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">open_price</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">high_price</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">low_price</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prev_close</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">change</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">change_percent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">volume</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bot_code/stock_class.html#CurrentStock.add"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bot_code.stock_class.CurrentStock.add" title="Permalink to this definition"><span>#</span></a></dt>
+<dd><p>Добавление дополнительных параметров компании</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>price</strong> (<em>Float</em>) – Текущая цена</p></li>
+<li><p><strong>open_price</strong> (<em>Float</em>) – Цена открытия</p></li>
+<li><p><strong>high_price</strong> (<em>Float</em>) – Высшая точка цены</p></li>
+<li><p><strong>low_price</strong> (<em>Float</em>) – Низшая точка цены</p></li>
+<li><p><strong>prev_close</strong> (<em>Float</em>) – Цена закрытия предыдущего дня торгов</p></li>
+<li><p><strong>change</strong> (<em>Float</em>) – Изменение цены</p></li>
+<li><p><strong>change_percent</strong> (<em>Float</em>) – Изменение цены в процентах</p></li>
+<li><p><strong>volume</strong> (<em>Integer</em>) – Объем продаж акции</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+    </article>
+
+    <footer>
+      
+        <div class="mt-20 mb-4 text-sm text-gray-700">&copy; 2022, Kontora P.&nbsp;Made with <a href="https://www.sphinx-doc.org">Sphinx 4.5.0</a></div>
+      
+    </footer></main>
+
+
+      <button
+  data-search-target="snackbar"
+  data-action="search#hideSnackbar"
+  class="fixed bottom-0 right-0 z-20 opacity-0 p-4 m-4 tracking-wide bg-gray-900 text-gray-100 transition transform transform-gpu duration-500 translate-y-full"
+>
+  Clear highlights
+</button><div
+  data-sidebar-target="screen"
+  data-action="click->sidebar#close"
+  class="fixed hidden inset-0 bg-black bg-opacity-50">
+</div>
+    </div>
+    
+      
+  <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+  <script src="../_static/jquery.js"></script>
+  <script src="../_static/underscore.js"></script>
+  <script src="../_static/doctools.js"></script>
+<script src="../_static/theme.1ba02c30758e6036ba31.js"></script>
+    
+  </body>
+</html>

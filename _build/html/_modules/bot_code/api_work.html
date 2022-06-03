@@ -1,0 +1,194 @@
+
+  
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    
+      <title>bot_code.api_work | ZXC StonksBot 1.0.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" />
+      <link rel="stylesheet" href="../../_static/theme.33684ae9923d01874503.css" />
+        <link rel="search" title="Search" href="../../search.html" />
+        <link rel="index" title="Index" href="../../genindex.html" />
+  </head>
+
+  <body class="antialiased text-gray scroll-smooth">
+    <div
+      id="page"
+      data-controller="sidebar search"
+      data-action="keydown@window->search#focus"
+      class="h-screen xl:grid xl:grid-layout"
+    >
+      <a class="block text-xl bg-white py-4 z-20 absolute top-0 h-14 inset-x-0 text-center transform -translate-y-full focus:translate-y-0 focus:outline-none transition-transform duration-75" href="#bot-code-api-work" title="Skip navigation links">Skip to content</a>
+
+      <header class="grid-area-header z-10 h-14">
+        <div class="bg-gray-dark shadow-md flex items-center h-full xl:px-2 relative"><div class="flex items-center">
+      <button
+    data-action="sidebar#open"
+    data-sidebar-target="hamburger"
+    class="xl:hidden h-14 w-14 leading-14 text-gray-100 hover:bg-gray-700 hover:text-brand focus:outline-none focus:bg-gray-700 focus:text-brand">
+  <span class="sr-only">Open navigation menu</span>
+  <svg aria-hidden="true" class="fill-current h-8 w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+</button><a class="hover:bg-gray-700 focus:bg-gray-700 focus:outline-none tooltipped tooltipped-sw"
+   href="../../index.html"
+   aria-label="Back to homepage"><span class="hidden lg:inline-block shrink-0 font-medium text-gray-100 mx-5 leading-14 tracking-wider">ZXC StonksBot 1.0.0 documentation</span>
+</a></div><div class="flex justify-end items-center flex-1"><form
+  id="searchbox"
+  action="../../search.html"
+  data-action="click->search#focusSearchInput"
+  method="get"
+  class="flex print:hidden justify-between items-center leading-14 md:ml-4 bg-gray-dark text-gray-300 focus-within:bg-gray-50 focus-within:text-gray-800 focus-within:absolute focus-within:inset-x-0 focus-within:top-0 md:focus-within:w-full md:focus-within:static">
+
+  <button
+    class="text-inherit h-14 w-14"
+    aria-label="Get search results"
+    tabindex="-1"
+  >
+    <svg aria-hidden="true" class="fill-current stroke-current h-8 w-8" stroke-width="0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+  </button>
+
+  <input
+    name="q"
+    id="search-input"
+    data-search-target="searchInput"
+    type="search"
+    aria-label="Search the docs"
+    placeholder="Search the docs"
+    class="pr-2 bg-transparent text-inherit focus:outline-none w-0 md:w-auto focus:w-full transition-all duration-100"
+  />
+</form></div>
+</div>
+      </header>
+
+      
+  <aside data-sidebar-target="sidebar" class="grid-area-sidebar h-full fixed xl:relative inset-y-0 left-0 z-20 xl:z-0 print:hidden overflow-y-auto transition-all transform transform-gpu -translate-x-full opacity-0 duration-300 xl:translate-x-0 xl:opacity-100">
+    <nav
+  role="navigation"
+  class="h-full overflow-y-auto bg-white text-gray-600 pt-8 flex flex-col"
+>
+  <div class="nav-toc flex-1 pl-6"><p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../docs/code.html">Code Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../docs/code.html#module-bot_code.api_work">Api Work Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../docs/code.html#module-bot_code.carcass">Carcass Moudle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../docs/code.html#module-bot_code.charts">Charts Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../docs/code.html#module-bot_code.stock_class">Stock Class Module</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+  <button
+      data-action=""
+      title="Close navigation menu"
+      class="text-4xl text-gray-800 p-4 bottom-0 hover:text-brand xl:hidden focus:text-brand self-center">
+    <span class="sr-only">Close navigation menu</span>
+    <svg aria-hidden="true" class="fill-current stroke-current h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+  </button>
+</nav>
+  </aside>
+
+  <main
+    data-controller="scroll"
+    data-action="scroll->scroll#showButton"
+    class="px-4 xl:ml-fluid grid-area-main overflow-y-auto flex flex-col h-full mx-0 md:mx-auto xl:mr-0"
+  ><nav role="navigation"
+     aria-label="breadcrumbs"
+     class="print:hidden mt-12 text-sm text-gray-light">
+  <a class="text-gray-light text-sm hover:text-gray-dark font-medium focus:text-gray-dark" href="../../index.html">ZXC StonksBot 1.0.0 documentation</a>
+  <span class="mr-1">/</span><a class="text-gray-light text-sm hover:text-gray-dark" href="../index.html">Module code</a>
+    <span class="mr-1">/</span><span aria-current="page">bot_code.api_work</span>
+</nav>
+    <article role="main" class="flex-1">
+      
+  <h1>Source code for bot_code.api_work</h1><div class="highlight"><pre>
+<code><span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="kn">from</span> <span class="nn">alpha_vantage.foreignexchange</span> <span class="kn">import</span> <span class="n">ForeignExchange</span>
+<span class="kn">from</span> <span class="nn">alpha_vantage.fundamentaldata</span> <span class="kn">import</span> <span class="n">FundamentalData</span>
+<span class="kn">from</span> <span class="nn">alpha_vantage.timeseries</span> <span class="kn">import</span> <span class="n">TimeSeries</span>
+<span class="kn">from</span> <span class="nn">constants</span> <span class="kn">import</span> <span class="n">Constants</span>
+
+<span class="n">ts</span> <span class="o">=</span> <span class="n">TimeSeries</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">Constants</span><span class="o">.</span><span class="n">ARTEMS_ALPHA_KEY</span><span class="p">,</span> <span class="n">output_format</span><span class="o">=</span><span class="s1">&#39;pandas&#39;</span><span class="p">,</span> <span class="n">indexing_type</span><span class="o">=</span><span class="s1">&#39;integer&#39;</span><span class="p">)</span>
+<span class="n">fd</span> <span class="o">=</span> <span class="n">FundamentalData</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">Constants</span><span class="o">.</span><span class="n">ARTEMS_ALPHA_KEY</span><span class="p">)</span>
+<span class="n">fx</span> <span class="o">=</span> <span class="n">ForeignExchange</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">Constants</span><span class="o">.</span><span class="n">ARTEMS_ALPHA_KEY</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="search"><a class="viewcode-back" href="../../docs/code.html#bot_code.api_work.search">[docs]</a><span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="n">ticker</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Обработка api-запроса для получения таблицы биржевых инструментов</span>
+
+<span class="sd">    :param ticker: Тикер биржевого инструмента</span>
+<span class="sd">    :type ticker: String</span>
+<span class="sd">    :return: Датафрейм с основными данными по тикеру</span>
+<span class="sd">    :rtype: pandas.DataFrame</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">ts</span><span class="o">.</span><span class="n">get_symbol_search</span><span class="p">(</span><span class="n">ticker</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;1. symbol&#39;</span><span class="p">:</span> <span class="s1">&#39;symbol&#39;</span><span class="p">,</span> <span class="s1">&#39;2. name&#39;</span><span class="p">:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;3. type&#39;</span><span class="p">:</span> <span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="s1">&#39;4. region&#39;</span><span class="p">:</span> <span class="s1">&#39;region&#39;</span><span class="p">,</span> <span class="s1">&#39;7. timezone&#39;</span><span class="p">:</span> <span class="s1">&#39;timezone&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;8. currency&#39;</span><span class="p">:</span> <span class="s1">&#39;currency&#39;</span><span class="p">})</span></div>
+
+
+<div class="viewcode-block" id="quote_endpoint"><a class="viewcode-back" href="../../docs/code.html#bot_code.api_work.quote_endpoint">[docs]</a><span class="k">def</span> <span class="nf">quote_endpoint</span><span class="p">(</span><span class="n">ticker</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Обработка api-запроса для получения дополнительных значений акции, необходимых для построения графиков</span>
+
+<span class="sd">    :param ticker: Тикер биржевого инструмента</span>
+<span class="sd">    :type ticker: String</span>
+<span class="sd">    :return: Датафрейм с нужными для построения графиков данными</span>
+<span class="sd">    :rtype: pandas.DataFrame</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">ts</span><span class="o">.</span><span class="n">get_quote_endpoint</span><span class="p">(</span><span class="n">ticker</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;01. symbol&#39;</span><span class="p">:</span> <span class="s1">&#39;symbol&#39;</span><span class="p">,</span> <span class="s1">&#39;02. open&#39;</span><span class="p">:</span> <span class="s1">&#39;open&#39;</span><span class="p">,</span> <span class="s1">&#39;03. high&#39;</span><span class="p">:</span> <span class="s1">&#39;high&#39;</span><span class="p">,</span> <span class="s1">&#39;04. low&#39;</span><span class="p">:</span> <span class="s1">&#39;low&#39;</span><span class="p">,</span> <span class="s1">&#39;05. price&#39;</span><span class="p">:</span> <span class="s1">&#39;price&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;06. volume&#39;</span><span class="p">:</span> <span class="s1">&#39;volume&#39;</span><span class="p">,</span> <span class="s2">&quot;07. latest trading day&quot;</span><span class="p">:</span> <span class="s2">&quot;latest trading day&quot;</span><span class="p">,</span> <span class="s2">&quot;08. previous close&quot;</span><span class="p">:</span> <span class="s2">&quot;previous close&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;09. change&quot;</span><span class="p">:</span> <span class="s2">&quot;change&quot;</span><span class="p">,</span> <span class="s2">&quot;10. change percent&quot;</span><span class="p">:</span> <span class="s2">&quot;change percent&quot;</span><span class="p">})</span></div>
+
+
+<div class="viewcode-block" id="cur_exchange_rate"><a class="viewcode-back" href="../../docs/code.html#bot_code.api_work.cur_exchange_rate">[docs]</a><span class="k">def</span> <span class="nf">cur_exchange_rate</span><span class="p">(</span><span class="n">from_cur</span><span class="p">,</span> <span class="n">to_cur</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Обработка api-запроса для получения курсов обмена</span>
+
+<span class="sd">    :param from_cur: Конвертируемая валюта</span>
+<span class="sd">    :type from_cur: String</span>
+<span class="sd">    :param to_cur: Итоговая валюта</span>
+<span class="sd">    :type to_cur: String</span>
+<span class="sd">    :return: Цена итоговой валюты</span>
+<span class="sd">    :rtype: Float</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="nb">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">fx</span><span class="o">.</span><span class="n">get_currency_exchange_rate</span><span class="p">(</span><span class="n">from_cur</span><span class="p">,</span> <span class="n">to_cur</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;5. Exchange Rate&quot;</span><span class="p">]),</span> <span class="mi">3</span><span class="p">)</span></div>
+
+
+</code></pre></div>
+
+    </article>
+
+    <footer>
+      
+        <div class="mt-20 mb-4 text-sm text-gray-700">&copy; 2022, Kontora P.&nbsp;Made with <a href="https://www.sphinx-doc.org">Sphinx 4.5.0</a></div>
+      
+    </footer></main>
+
+
+      <button
+  data-search-target="snackbar"
+  data-action="search#hideSnackbar"
+  class="fixed bottom-0 right-0 z-20 opacity-0 p-4 m-4 tracking-wide bg-gray-900 text-gray-100 transition transform transform-gpu duration-500 translate-y-full"
+>
+  Clear highlights
+</button><div
+  data-sidebar-target="screen"
+  data-action="click->sidebar#close"
+  class="fixed hidden inset-0 bg-black bg-opacity-50">
+</div>
+    </div>
+    
+      
+  <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+  <script src="../../_static/jquery.js"></script>
+  <script src="../../_static/underscore.js"></script>
+  <script src="../../_static/doctools.js"></script>
+<script src="../../_static/theme.1ba02c30758e6036ba31.js"></script>
+    
+  </body>
+</html>

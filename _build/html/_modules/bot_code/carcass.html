@@ -1,0 +1,546 @@
+
+  
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    
+      <title>bot_code.carcass | ZXC StonksBot 1.0.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" />
+      <link rel="stylesheet" href="../../_static/theme.33684ae9923d01874503.css" />
+        <link rel="search" title="Search" href="../../search.html" />
+        <link rel="index" title="Index" href="../../genindex.html" />
+  </head>
+
+  <body class="antialiased text-gray scroll-smooth">
+    <div
+      id="page"
+      data-controller="sidebar search"
+      data-action="keydown@window->search#focus"
+      class="h-screen xl:grid xl:grid-layout"
+    >
+      <a class="block text-xl bg-white py-4 z-20 absolute top-0 h-14 inset-x-0 text-center transform -translate-y-full focus:translate-y-0 focus:outline-none transition-transform duration-75" href="#bot-code-carcass" title="Skip navigation links">Skip to content</a>
+
+      <header class="grid-area-header z-10 h-14">
+        <div class="bg-gray-dark shadow-md flex items-center h-full xl:px-2 relative"><div class="flex items-center">
+      <button
+    data-action="sidebar#open"
+    data-sidebar-target="hamburger"
+    class="xl:hidden h-14 w-14 leading-14 text-gray-100 hover:bg-gray-700 hover:text-brand focus:outline-none focus:bg-gray-700 focus:text-brand">
+  <span class="sr-only">Open navigation menu</span>
+  <svg aria-hidden="true" class="fill-current h-8 w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+</button><a class="hover:bg-gray-700 focus:bg-gray-700 focus:outline-none tooltipped tooltipped-sw"
+   href="../../index.html"
+   aria-label="Back to homepage"><span class="hidden lg:inline-block shrink-0 font-medium text-gray-100 mx-5 leading-14 tracking-wider">ZXC StonksBot 1.0.0 documentation</span>
+</a></div><div class="flex justify-end items-center flex-1"><form
+  id="searchbox"
+  action="../../search.html"
+  data-action="click->search#focusSearchInput"
+  method="get"
+  class="flex print:hidden justify-between items-center leading-14 md:ml-4 bg-gray-dark text-gray-300 focus-within:bg-gray-50 focus-within:text-gray-800 focus-within:absolute focus-within:inset-x-0 focus-within:top-0 md:focus-within:w-full md:focus-within:static">
+
+  <button
+    class="text-inherit h-14 w-14"
+    aria-label="Get search results"
+    tabindex="-1"
+  >
+    <svg aria-hidden="true" class="fill-current stroke-current h-8 w-8" stroke-width="0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+  </button>
+
+  <input
+    name="q"
+    id="search-input"
+    data-search-target="searchInput"
+    type="search"
+    aria-label="Search the docs"
+    placeholder="Search the docs"
+    class="pr-2 bg-transparent text-inherit focus:outline-none w-0 md:w-auto focus:w-full transition-all duration-100"
+  />
+</form></div>
+</div>
+      </header>
+
+      
+  <aside data-sidebar-target="sidebar" class="grid-area-sidebar h-full fixed xl:relative inset-y-0 left-0 z-20 xl:z-0 print:hidden overflow-y-auto transition-all transform transform-gpu -translate-x-full opacity-0 duration-300 xl:translate-x-0 xl:opacity-100">
+    <nav
+  role="navigation"
+  class="h-full overflow-y-auto bg-white text-gray-600 pt-8 flex flex-col"
+>
+  <div class="nav-toc flex-1 pl-6"><p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../docs/code.html">Code Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../docs/code.html#module-bot_code.api_work">Api Work Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../docs/code.html#module-bot_code.carcass">Carcass Moudle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../docs/code.html#module-bot_code.charts">Charts Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../docs/code.html#module-bot_code.stock_class">Stock Class Module</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+  <button
+      data-action=""
+      title="Close navigation menu"
+      class="text-4xl text-gray-800 p-4 bottom-0 hover:text-brand xl:hidden focus:text-brand self-center">
+    <span class="sr-only">Close navigation menu</span>
+    <svg aria-hidden="true" class="fill-current stroke-current h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+  </button>
+</nav>
+  </aside>
+
+  <main
+    data-controller="scroll"
+    data-action="scroll->scroll#showButton"
+    class="px-4 xl:ml-fluid grid-area-main overflow-y-auto flex flex-col h-full mx-0 md:mx-auto xl:mr-0"
+  ><nav role="navigation"
+     aria-label="breadcrumbs"
+     class="print:hidden mt-12 text-sm text-gray-light">
+  <a class="text-gray-light text-sm hover:text-gray-dark font-medium focus:text-gray-dark" href="../../index.html">ZXC StonksBot 1.0.0 documentation</a>
+  <span class="mr-1">/</span><a class="text-gray-light text-sm hover:text-gray-dark" href="../index.html">Module code</a>
+    <span class="mr-1">/</span><span aria-current="page">bot_code.carcass</span>
+</nav>
+    <article role="main" class="flex-1">
+      
+  <h1>Source code for bot_code.carcass</h1><div class="highlight"><pre>
+<code><span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="kn">import</span> <span class="nn">telebot</span>
+<span class="kn">from</span> <span class="nn">telebot</span> <span class="kn">import</span> <span class="n">types</span>
+<span class="kn">from</span> <span class="nn">constants</span> <span class="kn">import</span> <span class="n">Constants</span><span class="p">,</span> <span class="n">CommandRelatedConsts</span>
+<span class="kn">from</span> <span class="nn">stock_class</span> <span class="kn">import</span> <span class="n">CurrentStock</span>
+<span class="kn">from</span> <span class="nn">api_work</span> <span class="kn">import</span> <span class="n">search</span><span class="p">,</span> <span class="n">quote_endpoint</span><span class="p">,</span> <span class="n">cur_exchange_rate</span>
+<span class="kn">from</span> <span class="nn">charts</span> <span class="kn">import</span> <span class="n">make_candlestick_chart</span><span class="p">,</span> <span class="n">make_chart</span>
+<span class="kn">import</span> <span class="nn">df2img</span>
+
+<span class="n">bot</span> <span class="o">=</span> <span class="n">telebot</span><span class="o">.</span><span class="n">TeleBot</span><span class="p">(</span><span class="n">Constants</span><span class="o">.</span><span class="n">BOT_KEY</span><span class="p">)</span>
+<span class="n">user_tickers</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">data_frames</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">user_additional_data</span> <span class="o">=</span> <span class="p">{}</span>
+
+
+<div class="viewcode-block" id="show_cur_exchange_rate"><a class="viewcode-back" href="../../docs/code.html#bot_code.carcass.show_cur_exchange_rate">[docs]</a><span class="nd">@bot</span><span class="o">.</span><span class="n">message_handler</span><span class="p">(</span><span class="n">commands</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;exchange&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">show_cur_exchange_rate</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Вывод сообщения с требуемым форматом ввода для exchange</span>
+
+<span class="sd">    :param message: Содержит пользовательский ввод</span>
+<span class="sd">    :type message: telebot.types.Message</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">bot</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s2">&quot;To convert write in the next format |CUR1 CUR2 AMMOUNT|&quot;</span><span class="p">)</span>
+    <span class="n">bot</span><span class="o">.</span><span class="n">register_next_step_handler</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">exchange_calculator</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="exchange_calculator"><a class="viewcode-back" href="../../docs/code.html#bot_code.carcass.exchange_calculator">[docs]</a><span class="k">def</span> <span class="nf">exchange_calculator</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Обрабатывает пользовательский ввод для exchange</span>
+
+<span class="sd">    :param message: Содержит пользовательский ввод</span>
+<span class="sd">    :type message: telebot.types.Message</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">from_curr</span><span class="p">,</span> <span class="n">to_curr</span><span class="p">,</span> <span class="n">amount</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+        <span class="n">convert_price</span> <span class="o">=</span> <span class="n">cur_exchange_rate</span><span class="p">(</span><span class="n">from_curr</span><span class="p">,</span> <span class="n">to_curr</span><span class="p">)</span>
+        <span class="n">bot</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                         <span class="n">amount</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">from_curr</span> <span class="o">+</span> <span class="s1">&#39; = &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">amount</span><span class="p">)</span> <span class="o">*</span> <span class="n">convert_price</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">to_curr</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="n">bot</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s2">&quot;Incorrect input :(&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="cripto_exchange_rate_handler"><a class="viewcode-back" href="../../docs/code.html#bot_code.carcass.cripto_exchange_rate_handler">[docs]</a><span class="nd">@bot</span><span class="o">.</span><span class="n">message_handler</span><span class="p">(</span><span class="n">commands</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;criptoexchangerate&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">cripto_exchange_rate_handler</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Вывод inline-клавиатуры для популярных криптовалют</span>
+
+<span class="sd">    :param message: Содержит пользовательский ввод</span>
+<span class="sd">    :type message: telebot.types.Message</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">cur_array</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;BTC&quot;</span><span class="p">,</span> <span class="s2">&quot;ETH&quot;</span><span class="p">,</span> <span class="s2">&quot;BNB&quot;</span><span class="p">,</span> <span class="s2">&quot;SOL&quot;</span><span class="p">,</span> <span class="s2">&quot;ADA&quot;</span><span class="p">,</span> <span class="s2">&quot;XRP&quot;</span><span class="p">,</span> <span class="s2">&quot;DOT&quot;</span><span class="p">,</span> <span class="s2">&quot;TRX&quot;</span><span class="p">,</span> <span class="s2">&quot;AVAX&quot;</span><span class="p">,</span> <span class="s2">&quot;SHIB&quot;</span><span class="p">,</span> <span class="s2">&quot;MATIC&quot;</span><span class="p">,</span> <span class="s2">&quot;LEO&quot;</span><span class="p">,</span> <span class="s2">&quot;LTC&quot;</span><span class="p">,</span> <span class="s2">&quot;CRO&quot;</span><span class="p">,</span>
+                 <span class="s2">&quot;FTT&quot;</span><span class="p">,</span> <span class="s2">&quot;CATGIRL&quot;</span><span class="p">,</span> <span class="s2">&quot;LUNA&quot;</span><span class="p">,</span> <span class="s2">&quot;CAKE&quot;</span><span class="p">,</span> <span class="s2">&quot;DOGE&quot;</span><span class="p">,</span> <span class="s2">&quot;SHIB&quot;</span><span class="p">]</span>
+    <span class="n">markup</span> <span class="o">=</span> <span class="n">make_markup</span><span class="p">(</span><span class="n">cur_array</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">bot</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s2">&quot;Exchange rate of 20 criptos&quot;</span><span class="p">,</span> <span class="n">reply_markup</span><span class="o">=</span><span class="n">markup</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="exchange_rate_handler"><a class="viewcode-back" href="../../docs/code.html#bot_code.carcass.exchange_rate_handler">[docs]</a><span class="nd">@bot</span><span class="o">.</span><span class="n">message_handler</span><span class="p">(</span><span class="n">commands</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;popularexchange&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">exchange_rate_handler</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Вывод inline-клавиатуры для курса обмена популярных валют</span>
+
+<span class="sd">    :param message: Содержит пользовательский ввод</span>
+<span class="sd">    :type message: telebot.types.Message</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">cur_array</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;$&quot;</span><span class="p">,</span> <span class="s2">&quot;€&quot;</span><span class="p">,</span> <span class="s2">&quot;¥&quot;</span><span class="p">,</span> <span class="s2">&quot;£&quot;</span><span class="p">,</span> <span class="s2">&quot;₽&quot;</span><span class="p">]</span>
+    <span class="n">cur_iso_code_array</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;USD&quot;</span><span class="p">,</span> <span class="s2">&quot;EUR&quot;</span><span class="p">,</span> <span class="s2">&quot;JPY&quot;</span><span class="p">,</span> <span class="s2">&quot;GBP&quot;</span><span class="p">,</span> <span class="s2">&quot;RUB&quot;</span><span class="p">]</span>
+    <span class="n">markup</span> <span class="o">=</span> <span class="n">make_markup</span><span class="p">(</span><span class="n">cur_array</span><span class="p">,</span> <span class="n">cur_iso_code_array</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">bot</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s2">&quot;Exchange rate of 5 most traded currencies&quot;</span><span class="p">,</span> <span class="n">reply_markup</span><span class="o">=</span><span class="n">markup</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="exchange_rate_sender"><a class="viewcode-back" href="../../docs/code.html#bot_code.carcass.exchange_rate_sender">[docs]</a><span class="nd">@bot</span><span class="o">.</span><span class="n">callback_query_handler</span><span class="p">(</span>
+    <span class="n">func</span><span class="o">=</span><span class="k">lambda</span> <span class="n">call</span><span class="p">:</span> <span class="n">call</span><span class="o">.</span><span class="n">data</span><span class="p">[:</span><span class="n">call</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s2">&quot;;&quot;</span><span class="p">)]</span> <span class="ow">in</span> <span class="n">Constants</span><span class="o">.</span><span class="n">CURRENCY</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">is_num</span><span class="p">(</span><span class="n">call</span><span class="o">.</span><span class="n">data</span><span class="p">))</span>
+<span class="k">def</span> <span class="nf">exchange_rate_sender</span><span class="p">(</span><span class="n">callback</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Обрабатывает нажатие кнопок в обменных функциях</span>
+
+<span class="sd">    :param callback: Содержит пользовательский выбор c inline-клавиатуре</span>
+<span class="sd">    :type callback: telebot.types.CallbackQuery</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">from_cur</span> <span class="o">=</span> <span class="n">callback</span><span class="o">.</span><span class="n">data</span><span class="p">[:</span><span class="n">callback</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s2">&quot;;&quot;</span><span class="p">)]</span>
+    <span class="n">to_cur</span> <span class="o">=</span> <span class="n">callback</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">callback</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s2">&quot;;&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:]</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">cur_exchange_rate</span><span class="p">(</span><span class="n">from_cur</span><span class="o">=</span><span class="n">from_cur</span><span class="p">,</span> <span class="n">to_cur</span><span class="o">=</span><span class="n">to_cur</span><span class="p">)</span>
+        <span class="n">bot</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">callback</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s2">&quot;1 &quot;</span> <span class="o">+</span> <span class="n">from_cur</span> <span class="o">+</span> <span class="s2">&quot; = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">to_cur</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="n">bot</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">callback</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                         <span class="s2">&quot;1 &quot;</span> <span class="o">+</span> <span class="n">from_cur</span> <span class="o">+</span> <span class="s2">&quot; = 0.0 &quot;</span> <span class="o">+</span> <span class="n">to_cur</span> <span class="o">+</span> <span class="s2">&quot;  (or alpha vanture limit is broken)&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="text_handler"><a class="viewcode-back" href="../../docs/code.html#bot_code.carcass.text_handler">[docs]</a><span class="nd">@bot</span><span class="o">.</span><span class="n">message_handler</span><span class="p">(</span><span class="n">content_types</span><span class="o">=</span><span class="s2">&quot;text&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">text_handler</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Обрабатывает любой введенный текст на проверку существующий команды</span>
+
+<span class="sd">    :param message: Содержит пользовательский ввод</span>
+<span class="sd">    :type message: telebot.types.Message</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">handlers_dict</span><span class="p">[</span><span class="n">message</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">()](</span><span class="n">message</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="n">bot</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">Constants</span><span class="o">.</span><span class="n">DEFAULT_TEXT</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="ticker_input"><a class="viewcode-back" href="../../docs/code.html#bot_code.carcass.ticker_input">[docs]</a><span class="k">def</span> <span class="nf">ticker_input</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Ввод тикера &quot;&quot;&quot;</span>
+    <span class="n">user_tickers</span><span class="p">[</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">]</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">text</span>
+    <span class="n">overview_result</span><span class="p">(</span><span class="n">message</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="ticker_input_handler"><a class="viewcode-back" href="../../docs/code.html#bot_code.carcass.ticker_input_handler">[docs]</a><span class="k">def</span> <span class="nf">ticker_input_handler</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Обработка введенного тикера, вывод кнопок для дальнейших операций с тикером</span>
+
+<span class="sd">    :param message: Содержит пользовательский ввод</span>
+<span class="sd">    :type message: telebot.types.Message</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">markup</span> <span class="o">=</span> <span class="n">types</span><span class="o">.</span><span class="n">InlineKeyboardMarkup</span><span class="p">()</span>
+    <span class="n">markup</span><span class="o">.</span><span class="n">row</span><span class="p">(</span><span class="n">types</span><span class="o">.</span><span class="n">InlineKeyboardButton</span><span class="p">(</span><span class="s2">&quot;Compartment chart&quot;</span><span class="p">,</span> <span class="n">callback_data</span><span class="o">=</span><span class="s2">&quot;compartment_chart&quot;</span><span class="p">),</span>
+               <span class="n">types</span><span class="o">.</span><span class="n">InlineKeyboardButton</span><span class="p">(</span><span class="s2">&quot;Candle chart&quot;</span><span class="p">,</span> <span class="n">callback_data</span><span class="o">=</span><span class="s2">&quot;candle_chart&quot;</span><span class="p">))</span>
+    <span class="n">markup</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">types</span><span class="o">.</span><span class="n">InlineKeyboardButton</span><span class="p">(</span><span class="s2">&quot;Another ticker&quot;</span><span class="p">,</span> <span class="n">callback_data</span><span class="o">=</span><span class="s2">&quot;another_ticker&quot;</span><span class="p">),</span>
+               <span class="n">types</span><span class="o">.</span><span class="n">InlineKeyboardButton</span><span class="p">(</span><span class="s2">&quot;Stop&quot;</span><span class="p">,</span> <span class="n">callback_data</span><span class="o">=</span><span class="s2">&quot;stop&quot;</span><span class="p">))</span>
+
+    <span class="n">bot</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s2">&quot;Choose variant&quot;</span><span class="p">,</span> <span class="n">reply_markup</span><span class="o">=</span><span class="n">markup</span><span class="p">)</span></div>
+
+
+<span class="nd">@bot</span><span class="o">.</span><span class="n">callback_query_handler</span><span class="p">(</span>
+    <span class="n">func</span><span class="o">=</span><span class="k">lambda</span> <span class="n">call</span><span class="p">:</span> <span class="n">call</span><span class="o">.</span><span class="n">data</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;overview&quot;</span><span class="p">,</span> <span class="s2">&quot;candle_chart&quot;</span><span class="p">,</span> <span class="s2">&quot;another_ticker&quot;</span><span class="p">,</span> <span class="s2">&quot;stop&quot;</span><span class="p">,</span> <span class="s2">&quot;compartment_chart&quot;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">data_processing_variant_handler</span><span class="p">(</span><span class="n">callback</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Обработка кнопок операций с тикером</span>
+
+<span class="sd">    :param callback: Содержит пользовательский выбор c inline-клавиатуре</span>
+<span class="sd">    :type callback: telebot.types.CallbackQuery</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">bot</span><span class="o">.</span><span class="n">edit_message_reply_markup</span><span class="p">(</span><span class="n">callback</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">callback</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">message_id</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">callback</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="s1">&#39;candle_chart&#39;</span><span class="p">:</span>
+        <span class="n">candle_handler</span><span class="p">(</span><span class="n">callback</span><span class="o">.</span><span class="n">message</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">callback</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="s1">&#39;another_ticker&#39;</span><span class="p">:</span>
+        <span class="n">start_handler</span><span class="p">(</span><span class="n">callback</span><span class="o">.</span><span class="n">message</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">callback</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="s2">&quot;compartment_chart&quot;</span><span class="p">:</span>
+        <span class="n">bot</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">callback</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s2">&quot;Введите Тикер с которым будете сравнивать&quot;</span><span class="p">)</span>
+        <span class="n">bot</span><span class="o">.</span><span class="n">register_next_step_handler</span><span class="p">(</span><span class="n">callback</span><span class="o">.</span><span class="n">message</span><span class="p">,</span> <span class="n">compartment_chart</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">bot</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">callback</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s2">&quot;Hope that you found everything that you needed&quot;</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="candle_handler"><a class="viewcode-back" href="../../docs/code.html#bot_code.carcass.candle_handler">[docs]</a><span class="k">def</span> <span class="nf">candle_handler</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Обрабатывает пользовательский ввод для определения периода графика свеч</span>
+
+<span class="sd">    :param message: Содержит пользовательский ввод</span>
+<span class="sd">    :type message: telebot.types.Message</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">markup</span> <span class="o">=</span> <span class="n">types</span><span class="o">.</span><span class="n">InlineKeyboardMarkup</span><span class="p">(</span><span class="n">row_width</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">markup</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">types</span><span class="o">.</span><span class="n">InlineKeyboardButton</span><span class="p">(</span><span class="s2">&quot;Daily adjusted - 1&quot;</span><span class="p">,</span> <span class="n">callback_data</span><span class="o">=</span><span class="s2">&quot;Daily1&quot;</span><span class="p">))</span>
+    <span class="n">markup</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">types</span><span class="o">.</span><span class="n">InlineKeyboardButton</span><span class="p">(</span><span class="s2">&quot;Weekly adjusted - 2&quot;</span><span class="p">,</span> <span class="n">callback_data</span><span class="o">=</span><span class="s2">&quot;Weekly1&quot;</span><span class="p">))</span>
+    <span class="n">markup</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">types</span><span class="o">.</span><span class="n">InlineKeyboardButton</span><span class="p">(</span><span class="s2">&quot;Monthly adjusted - 3&quot;</span><span class="p">,</span> <span class="n">callback_data</span><span class="o">=</span><span class="s2">&quot;Monthly1&quot;</span><span class="p">))</span>
+    <span class="n">bot</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s2">&quot;Pic will be rendering for some time, pls wait :)&quot;</span><span class="p">)</span>
+    <span class="n">bot</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s2">&quot;Daily adjusted - 1; Weekly adjusted - 2; Monthly adjusted - 3;&quot;</span><span class="p">,</span>
+                     <span class="n">reply_markup</span><span class="o">=</span><span class="n">markup</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="compartment_chart"><a class="viewcode-back" href="../../docs/code.html#bot_code.carcass.compartment_chart">[docs]</a><span class="k">def</span> <span class="nf">compartment_chart</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Обрабатывает пользвотельский ввод второго значения тикера для построения графика сравнения, также спрашивает</span>
+<span class="sd">    период графика</span>
+
+<span class="sd">    :param message: Содержит пользовательский ввод</span>
+<span class="sd">    :type message: telebot.types.Message</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">user_additional_data</span><span class="p">[</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">]</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">text</span>
+    <span class="n">markup</span> <span class="o">=</span> <span class="n">types</span><span class="o">.</span><span class="n">InlineKeyboardMarkup</span><span class="p">(</span><span class="n">row_width</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">markup</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">types</span><span class="o">.</span><span class="n">InlineKeyboardButton</span><span class="p">(</span><span class="s2">&quot;Daily adjusted - 1&quot;</span><span class="p">,</span> <span class="n">callback_data</span><span class="o">=</span><span class="s2">&quot;Daily2&quot;</span><span class="p">))</span>
+    <span class="n">markup</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">types</span><span class="o">.</span><span class="n">InlineKeyboardButton</span><span class="p">(</span><span class="s2">&quot;Weekly adjusted - 2&quot;</span><span class="p">,</span> <span class="n">callback_data</span><span class="o">=</span><span class="s2">&quot;Weekly2&quot;</span><span class="p">))</span>
+    <span class="n">markup</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">types</span><span class="o">.</span><span class="n">InlineKeyboardButton</span><span class="p">(</span><span class="s2">&quot;Monthly adjusted - 3&quot;</span><span class="p">,</span> <span class="n">callback_data</span><span class="o">=</span><span class="s2">&quot;Monthly2&quot;</span><span class="p">))</span>
+    <span class="n">bot</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s2">&quot;Pic will be rendering for some time, pls wait :)&quot;</span><span class="p">,</span> <span class="n">reply_markup</span><span class="o">=</span><span class="n">markup</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="adjusted_num_handler"><a class="viewcode-back" href="../../docs/code.html#bot_code.carcass.adjusted_num_handler">[docs]</a><span class="nd">@bot</span><span class="o">.</span><span class="n">callback_query_handler</span><span class="p">(</span><span class="n">func</span><span class="o">=</span><span class="k">lambda</span> <span class="n">call</span><span class="p">:</span> <span class="n">call</span><span class="o">.</span><span class="n">data</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Daily&quot;</span><span class="p">,</span> <span class="s2">&quot;Weekly&quot;</span><span class="p">,</span> <span class="s2">&quot;Monthly&quot;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">adjusted_num_handler</span><span class="p">(</span><span class="n">callback</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Обработка нажатие кнопки при выборе периодов вывода графика</span>
+
+<span class="sd">    :param callback: Содержит пользовательский выбор c inline-клавиатуре</span>
+<span class="sd">    :type callback: telebot.types.CallbackQuery</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">bot</span><span class="o">.</span><span class="n">edit_message_reply_markup</span><span class="p">(</span><span class="n">callback</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">callback</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">message_id</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">callback</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span><span class="p">:</span>
+            <span class="n">make_candlestick_chart</span><span class="p">(</span><span class="n">callback</span><span class="o">.</span><span class="n">data</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">user_tickers</span><span class="p">[</span><span class="n">callback</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>
+        <span class="k">elif</span> <span class="n">callback</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;2&#39;</span><span class="p">:</span>
+            <span class="n">make_chart</span><span class="p">(</span><span class="n">callback</span><span class="o">.</span><span class="n">data</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">user_tickers</span><span class="p">[</span><span class="n">callback</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+                       <span class="n">user_additional_data</span><span class="p">[</span><span class="n">callback</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>
+        <span class="n">picture</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;D:/PythonProgects/ZXC_Stonks_Bot/stonckbot/images/fig1.png&quot;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span>
+        <span class="n">bot</span><span class="o">.</span><span class="n">send_photo</span><span class="p">(</span><span class="n">callback</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">picture</span><span class="p">,</span> <span class="n">caption</span><span class="o">=</span><span class="s2">&quot;Here you are&quot;</span><span class="p">)</span>
+        <span class="n">picture</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="n">bot</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">callback</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s2">&quot;Incorrect token&quot;</span><span class="p">)</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="n">callback</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">user_tickers</span><span class="p">[</span><span class="n">callback</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">]</span>
+        <span class="n">ticker_input_handler</span><span class="p">(</span><span class="n">callback</span><span class="o">.</span><span class="n">message</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="overview_result"><a class="viewcode-back" href="../../docs/code.html#bot_code.carcass.overview_result">[docs]</a><span class="k">def</span> <span class="nf">overview_result</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Вывод оверьвю полученного тикера в .png формате</span>
+
+<span class="sd">    :param message: Содержит пользовательский ввод</span>
+<span class="sd">    :type message: telebot.types.Message</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">ticker</span> <span class="o">=</span> <span class="n">user_tickers</span><span class="p">[</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">]</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">search</span><span class="p">(</span><span class="n">ticker</span><span class="p">)</span>
+        <span class="n">data_frames</span><span class="p">[</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="n">markup</span> <span class="o">=</span> <span class="n">types</span><span class="o">.</span><span class="n">InlineKeyboardMarkup</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">2</span><span class="p">):</span>
+                <span class="n">markup</span><span class="o">.</span><span class="n">row</span><span class="p">(</span><span class="n">types</span><span class="o">.</span><span class="n">InlineKeyboardButton</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;symbol&quot;</span><span class="p">],</span> <span class="n">callback_data</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)),</span>
+                           <span class="n">types</span><span class="o">.</span><span class="n">InlineKeyboardButton</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">][</span><span class="s2">&quot;symbol&quot;</span><span class="p">],</span> <span class="n">callback_data</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+                <span class="n">markup</span><span class="o">.</span><span class="n">row</span><span class="p">(</span><span class="n">types</span><span class="o">.</span><span class="n">InlineKeyboardButton</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;symbol&quot;</span><span class="p">],</span> <span class="n">callback_data</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)))</span>
+
+        <span class="n">markup</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">types</span><span class="o">.</span><span class="n">InlineKeyboardButton</span><span class="p">(</span><span class="s2">&quot;Exit overview&quot;</span><span class="p">,</span> <span class="n">callback_data</span><span class="o">=</span><span class="s2">&quot;-1&quot;</span><span class="p">))</span>
+        <span class="n">bot</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s2">&quot;Here are the search results:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">fig</span> <span class="o">=</span> <span class="n">df2img</span><span class="o">.</span><span class="n">plot_dataframe</span><span class="p">(</span><span class="n">data</span><span class="p">[[</span><span class="s1">&#39;symbol&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">]],</span> <span class="n">title</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+            <span class="n">font_color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span>
+            <span class="n">font_family</span><span class="o">=</span><span class="s2">&quot;Arial&quot;</span><span class="p">,</span>
+            <span class="n">font_size</span><span class="o">=</span><span class="mi">22</span><span class="p">,</span>
+            <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Search Result&quot;</span><span class="p">,</span>
+            <span class="n">y</span><span class="o">=</span><span class="mf">0.98</span>
+        <span class="p">),</span>
+                                    <span class="n">tbl_header</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+                                        <span class="n">align</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+                                        <span class="n">fill_color</span><span class="o">=</span><span class="s2">&quot;darkgray&quot;</span><span class="p">,</span>
+                                        <span class="n">font_color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span>
+                                        <span class="n">font_family</span><span class="o">=</span><span class="s2">&quot;Arial&quot;</span><span class="p">,</span>
+                                        <span class="n">font_size</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
+                                        <span class="n">line_color</span><span class="o">=</span><span class="s2">&quot;darkslategray&quot;</span><span class="p">,</span>
+                                    <span class="p">),</span>
+                                    <span class="n">tbl_cells</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+                                        <span class="n">align</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+                                        <span class="n">font_family</span><span class="o">=</span><span class="s2">&quot;Arial&quot;</span><span class="p">,</span>
+                                        <span class="n">font_color</span><span class="o">=</span><span class="s2">&quot;#434343&quot;</span><span class="p">,</span>
+                                        <span class="n">line_color</span><span class="o">=</span><span class="s2">&quot;darkslategray&quot;</span><span class="p">,</span>
+                                        <span class="n">height</span><span class="o">=</span><span class="mi">30</span>
+                                    <span class="p">),</span>
+                                    <span class="n">row_fill_color</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;#ffffff&quot;</span><span class="p">,</span> <span class="s2">&quot;#efefef&quot;</span><span class="p">),</span>
+                                    <span class="n">col_width</span><span class="o">=</span><span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+                                    <span class="n">fig_size</span><span class="o">=</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">55</span> <span class="o">*</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="p">)</span>
+
+        <span class="n">df2img</span><span class="o">.</span><span class="n">save_dataframe</span><span class="p">(</span><span class="n">fig</span><span class="o">=</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;D:/PythonProgects/ZXC_Stonks_Bot/stonckbot/images/plot1.png&quot;</span><span class="p">)</span>
+
+        <span class="n">picture</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;D:/PythonProgects/ZXC_Stonks_Bot/stonckbot/images/plot1.png&quot;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span>
+        <span class="n">bot</span><span class="o">.</span><span class="n">send_photo</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">photo</span><span class="o">=</span><span class="n">picture</span><span class="p">,</span> <span class="n">reply_markup</span><span class="o">=</span><span class="n">markup</span><span class="p">)</span>
+        <span class="n">bot</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                         <span class="s2">&quot;Press the ticker of the company you are interested in.&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="n">bot</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s2">&quot;No data was received&quot;</span><span class="p">)</span>
+        <span class="n">overview_result</span><span class="p">(</span><span class="n">ticker</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="data_processing_variant_handler"><a class="viewcode-back" href="../../docs/code.html#bot_code.carcass.data_processing_variant_handler">[docs]</a><span class="nd">@bot</span><span class="o">.</span><span class="n">callback_query_handler</span><span class="p">(</span><span class="n">func</span><span class="o">=</span><span class="k">lambda</span> <span class="n">call</span><span class="p">:</span> <span class="n">call</span><span class="o">.</span><span class="n">data</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">,</span> <span class="s1">&#39;6&#39;</span><span class="p">,</span> <span class="s1">&#39;7&#39;</span><span class="p">,</span> <span class="s1">&#39;8&#39;</span><span class="p">,</span> <span class="s1">&#39;9&#39;</span><span class="p">,</span> <span class="s1">&#39;-1&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">data_processing_variant_handler</span><span class="p">(</span><span class="n">callback</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Обработка нажатия кнопки в /overview</span>
+
+<span class="sd">    :param callback: Содержит пользовательский выбор c inline-клавиатуре</span>
+<span class="sd">    :type callback: telebot.types.CallbackQuery</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">bot</span><span class="o">.</span><span class="n">edit_message_reply_markup</span><span class="p">(</span><span class="n">callback</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">callback</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">message_id</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">callback</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="s1">&#39;-1&#39;</span><span class="p">:</span>
+        <span class="n">bot</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">callback</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s2">&quot;Finished&quot;</span><span class="p">)</span>
+        <span class="n">callback</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">user_tickers</span><span class="p">[</span><span class="n">callback</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">]</span>
+        <span class="n">ticker_input</span><span class="p">(</span><span class="n">callback</span><span class="o">.</span><span class="n">message</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">user_index_input</span><span class="p">(</span><span class="n">callback</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="user_index_input"><a class="viewcode-back" href="../../docs/code.html#bot_code.carcass.user_index_input">[docs]</a><span class="k">def</span> <span class="nf">user_index_input</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Обработка ввода id тикера из .png таблицы</span>
+
+<span class="sd">    :param message: Содержит пользовательский ввод</span>
+<span class="sd">    :type message: telebot.types.Message</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">data_frames</span><span class="p">[</span><span class="n">message</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">]</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">overview_dataframe</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">data</span><span class="p">)]</span>
+        <span class="n">tmp_stock</span> <span class="o">=</span> <span class="n">CurrentStock</span><span class="p">(</span><span class="n">overview_dataframe</span><span class="p">[</span><span class="s1">&#39;symbol&#39;</span><span class="p">],</span> <span class="n">overview_dataframe</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span>
+                                 <span class="n">overview_dataframe</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">],</span> <span class="n">overview_dataframe</span><span class="p">[</span><span class="s1">&#39;region&#39;</span><span class="p">],</span>
+                                 <span class="n">overview_dataframe</span><span class="p">[</span><span class="s1">&#39;timezone&#39;</span><span class="p">],</span> <span class="n">overview_dataframe</span><span class="p">[</span><span class="s1">&#39;currency&#39;</span><span class="p">],</span> <span class="p">)</span>
+        <span class="n">overview_dataframe</span> <span class="o">=</span> <span class="n">quote_endpoint</span><span class="p">(</span><span class="n">tmp_stock</span><span class="o">.</span><span class="n">symbol</span><span class="p">)</span>
+        <span class="n">tmp_stock</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">overview_dataframe</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;price&#39;</span><span class="p">],</span> <span class="n">overview_dataframe</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;open&#39;</span><span class="p">],</span>
+                      <span class="n">overview_dataframe</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;high&#39;</span><span class="p">],</span>
+                      <span class="n">overview_dataframe</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;low&#39;</span><span class="p">],</span> <span class="n">overview_dataframe</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;previous close&#39;</span><span class="p">],</span>
+                      <span class="n">overview_dataframe</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;change&#39;</span><span class="p">],</span>
+                      <span class="n">overview_dataframe</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;change percent&#39;</span><span class="p">],</span> <span class="n">overview_dataframe</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;volume&#39;</span><span class="p">])</span>
+
+        <span class="n">bot</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">tmp_stock</span><span class="o">.</span><span class="fm">__str__</span><span class="p">())</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">tmp_stock</span><span class="o">.</span><span class="n">symbol</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="n">bot</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s2">&quot;No data was received, sorry!&quot;</span><span class="p">)</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="n">message</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">tmp_stock</span><span class="o">.</span><span class="n">symbol</span>
+        <span class="n">user_tickers</span><span class="p">[</span><span class="n">message</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">]</span> <span class="o">=</span> <span class="n">tmp_stock</span><span class="o">.</span><span class="n">symbol</span>
+        <span class="n">ticker_input_handler</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">message</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="help_command_handler"><a class="viewcode-back" href="../../docs/code.html#bot_code.carcass.help_command_handler">[docs]</a><span class="k">def</span> <span class="nf">help_command_handler</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Вывод сообщения команды /help</span>
+
+<span class="sd">    :param message: Содержит пользовательский ввод</span>
+<span class="sd">    :type message: telebot.types.Message</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">bot</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">CommandRelatedConsts</span><span class="o">.</span><span class="n">HELP_TEXT</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="start_handler"><a class="viewcode-back" href="../../docs/code.html#bot_code.carcass.start_handler">[docs]</a><span class="k">def</span> <span class="nf">start_handler</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Вывод сообщения команды /start</span>
+
+<span class="sd">    :param message: Содержит пользовательский ввод</span>
+<span class="sd">    :type message: telebot.types.Message</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># message equals to /start</span>
+    <span class="n">bot</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s2">&quot;Введите токен&quot;</span><span class="p">)</span>  <span class="c1"># bot sends message</span>
+    <span class="n">bot</span><span class="o">.</span><span class="n">register_next_step_handler</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">ticker_input</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="make_markup"><a class="viewcode-back" href="../../docs/code.html#bot_code.carcass.make_markup">[docs]</a><span class="k">def</span> <span class="nf">make_markup</span><span class="p">(</span><span class="n">cur_array</span><span class="p">,</span> <span class="n">cur_iso_code_array</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Создание inline-клавиатуры для валют</span>
+
+<span class="sd">    :param cur_array: Массив валют</span>
+<span class="sd">    :type cur_array: List</span>
+<span class="sd">    :param cur_iso_code_array: Массив валют в iso формате</span>
+<span class="sd">    :type cur_iso_code_array: List</span>
+<span class="sd">    :param mode: Режим работы функции</span>
+<span class="sd">    :type mode: Integer</span>
+<span class="sd">    :return: Inline-клавиатура</span>
+<span class="sd">    :rtype: telebot.types.InlineKeyboardMarkup</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">cur_iso_code_array</span><span class="p">:</span>
+        <span class="n">cur_iso_code_array</span> <span class="o">=</span> <span class="n">cur_array</span>
+
+    <span class="n">markup</span> <span class="o">=</span> <span class="n">types</span><span class="o">.</span><span class="n">InlineKeyboardMarkup</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="c1">#  Мод 1 для перевода из многих валют в многие</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cur_array</span><span class="p">)):</span>
+            <span class="n">buttons_arr</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cur_array</span><span class="p">)):</span>
+                <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">j</span><span class="p">:</span>
+                    <span class="n">buttons_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                        <span class="n">types</span><span class="o">.</span><span class="n">InlineKeyboardButton</span><span class="p">(</span><span class="n">cur_array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;➔&quot;</span> <span class="o">+</span> <span class="n">cur_array</span><span class="p">[</span><span class="n">j</span><span class="p">],</span>
+                                                   <span class="n">callback_data</span><span class="o">=</span><span class="n">cur_iso_code_array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;;&#39;</span> <span class="o">+</span> <span class="n">cur_iso_code_array</span><span class="p">[</span><span class="n">j</span><span class="p">]))</span>
+
+            <span class="n">markup</span><span class="o">.</span><span class="n">row</span><span class="p">(</span><span class="o">*</span><span class="n">buttons_arr</span><span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">mode</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="c1">#  Мод 2 для перевода из многих валют в одну конкретную</span>
+        <span class="n">cur_iso_code_array</span> <span class="o">=</span> <span class="s2">&quot;USDT&quot;</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+            <span class="n">markup</span><span class="o">.</span><span class="n">row</span><span class="p">(</span>
+                <span class="n">types</span><span class="o">.</span><span class="n">InlineKeyboardButton</span><span class="p">(</span><span class="n">cur_array</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+                                           <span class="n">callback_data</span><span class="o">=</span><span class="n">cur_array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;;&#39;</span> <span class="o">+</span> <span class="n">cur_iso_code_array</span><span class="p">),</span>
+                <span class="n">types</span><span class="o">.</span><span class="n">InlineKeyboardButton</span><span class="p">(</span><span class="n">cur_array</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span>
+                                           <span class="n">callback_data</span><span class="o">=</span><span class="n">cur_array</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;;&#39;</span> <span class="o">+</span> <span class="n">cur_iso_code_array</span><span class="p">),</span>
+                <span class="n">types</span><span class="o">.</span><span class="n">InlineKeyboardButton</span><span class="p">(</span><span class="n">cur_array</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">],</span>
+                                           <span class="n">callback_data</span><span class="o">=</span><span class="n">cur_array</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;;&#39;</span> <span class="o">+</span> <span class="n">cur_iso_code_array</span><span class="p">),</span>
+                <span class="n">types</span><span class="o">.</span><span class="n">InlineKeyboardButton</span><span class="p">(</span><span class="n">cur_array</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">3</span><span class="p">],</span>
+                                           <span class="n">callback_data</span><span class="o">=</span><span class="n">cur_array</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;;&#39;</span> <span class="o">+</span> <span class="n">cur_iso_code_array</span><span class="p">),</span>
+                <span class="n">types</span><span class="o">.</span><span class="n">InlineKeyboardButton</span><span class="p">(</span><span class="n">cur_array</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">4</span><span class="p">],</span>
+                                           <span class="n">callback_data</span><span class="o">=</span><span class="n">cur_array</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;;&#39;</span> <span class="o">+</span> <span class="n">cur_iso_code_array</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">markup</span></div>
+
+
+<div class="viewcode-block" id="is_num"><a class="viewcode-back" href="../../docs/code.html#bot_code.carcass.is_num">[docs]</a><span class="k">def</span> <span class="nf">is_num</span><span class="p">(</span><span class="n">number</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Проверка String на возможность конвертации в число</span>
+
+<span class="sd">    :param number: Строка</span>
+<span class="sd">    :type number: String</span>
+<span class="sd">    :return:</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="n">number</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">number</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">():</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
+
+
+<span class="n">handlers_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;/help&quot;</span><span class="p">:</span> <span class="n">help_command_handler</span><span class="p">,</span>
+    <span class="s2">&quot;/start&quot;</span><span class="p">:</span> <span class="n">start_handler</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">bot</span><span class="o">.</span><span class="n">polling</span><span class="p">(</span><span class="n">none_stop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+    </article>
+
+    <footer>
+      
+        <div class="mt-20 mb-4 text-sm text-gray-700">&copy; 2022, Kontora P.&nbsp;Made with <a href="https://www.sphinx-doc.org">Sphinx 4.5.0</a></div>
+      
+    </footer></main>
+
+
+      <button
+  data-search-target="snackbar"
+  data-action="search#hideSnackbar"
+  class="fixed bottom-0 right-0 z-20 opacity-0 p-4 m-4 tracking-wide bg-gray-900 text-gray-100 transition transform transform-gpu duration-500 translate-y-full"
+>
+  Clear highlights
+</button><div
+  data-sidebar-target="screen"
+  data-action="click->sidebar#close"
+  class="fixed hidden inset-0 bg-black bg-opacity-50">
+</div>
+    </div>
+    
+      
+  <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+  <script src="../../_static/jquery.js"></script>
+  <script src="../../_static/underscore.js"></script>
+  <script src="../../_static/doctools.js"></script>
+<script src="../../_static/theme.1ba02c30758e6036ba31.js"></script>
+    
+  </body>
+</html>
